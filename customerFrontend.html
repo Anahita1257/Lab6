@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title> Anahita's Quick Shop </title>
+
+
+		<link rel="stylesheet" href="style.css">
+		<script src="formChecker.js"></script>
+
+	</head>
+
+	<body>
+		<div id="container">
+
+			<h3> Welcome to my online Shop! </h3> <br> <br>
+
+		<form class="shopForm" action ="customerBackend.php" method="post" onsubmit="return validate()">
+
+			<div id="signInDiv">
+					<p>Please sign in using your email: <span id="email_warning"></span><p>
+					<input type="text" id="username" value=""> <br>
+					<p> Enter your password: <span id="pass_warning"></span></p>
+					<input type="text" id="password" value=""> <br>
+
+			</div>
+
+				<div id="itemDiv">
+
+					<div class="item">
+						<h4>New Women's sneakers</h4>
+						<img class ="itemImage" src="./1.jpg" height="250" width="300">
+						<p> Quantity: <input type="number" id="item1" name="item1" value="0" min="0" max="20"> </p>
+
+					</div>
+
+					<div class="item">
+						<h3> Women's casual winter dress</h3>
+						<img class ="itemImage" src="./2.jpg" height="250" width="300">
+						<p> Quantity: <input type="number" id="item2" name="item2" value="0" min="0" max="20"> </p>
+
+					</div>
+
+					<div class="item">
+						<h3> Women's pants </h3>
+						<img class ="itemImage" src="./3.jpg" height="250" width="300">
+						<p> Quantity: <input type="number" id="item3" name="item3" value="0" min="0" max="20"> </p>
+
+					</div>
+
+				</div>
+
+				<div id="shippingDiv">
+					<h4> Choose a shopping method: </h4>
+					<input type="radio" name="shipOption" id="shipOption0" value="0"> 7 day: Free <br>
+					<input type="radio" name="shipOption" id="shipOption2" value="2"> 3 day: $10.00 <br> <br>
+				</div>
+
+			<input type="submit" value ="Submit" >
+			<input type="button" onclick="reset()" value ="Reset">
+
+		</form>
+		</div>
+
+		<script src="formChecker.js"></script>
+	</body>
+
+</html>
